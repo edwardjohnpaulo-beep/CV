@@ -1,0 +1,146 @@
+:root{
+  --bg-dark:#0e001a;
+  --bg-light:#f5f5ff;
+  --text-dark:#ffffff;
+  --text-light:#111111;
+  --accent:#b026ff;
+  --card:rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--bg-dark);
+  color:var(--text-dark);
+  font-family:Poppins,system-ui;
+  line-height:1.5;
+  transition:.3s;
+}
+
+body.light{
+  background:var(--bg-light);
+  color:var(--text-light);
+}
+
+.site-header{
+  padding:20px;
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.site-title{color:var(--accent)}
+.site-tagline{opacity:.85}
+
+.icon-btn{
+  border:none;
+  background:var(--accent);
+  border-radius:50%;
+  padding:8px;
+  cursor:pointer;
+}
+
+.hero{text-align:center;padding:40px}
+.profile-img{
+  width:150px;height:150px;border-radius:50%;
+  border:3px solid var(--accent);
+}
+
+.lead{
+  margin:12px 0 22px;
+  opacity:.95;
+}
+
+.btn{
+  background:var(--accent);
+  padding:10px 18px;
+  border-radius:30px;
+  text-decoration:none;
+  color:#000;
+  font-weight:600;
+}
+
+.btn-ghost{
+  background:transparent;
+  border:1px solid rgba(255,255,255,.2);
+  color:inherit;
+}
+
+.section{max-width:1100px;margin:auto;padding:36px 18px}
+
+.skill-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+  list-style:none;
+}
+
+/* Accordion */
+.accordion{
+  width:100%;
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.1);
+  color:inherit;
+  padding:14px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+  margin-bottom:8px;
+  text-align:left;
+}
+
+.panel{
+  display:none;
+  padding:12px 18px;
+  margin-bottom:12px;
+  border-left:3px solid var(--accent);
+}
+
+body.light .accordion{
+  background:#fff;
+  border-color:#ddd;
+}
+
+footer{
+  text-align:center;
+  padding:18px;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+
+#scrollTop{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  display:none;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  border:none;
+  background:var(--accent);
+  cursor:pointer;
+}
+
+/* Preloader */
+#preloader{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--bg-dark);
+  z-index:9999;
+}
+.loader{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  border:6px solid var(--accent);
+  border-top-color:transparent;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
